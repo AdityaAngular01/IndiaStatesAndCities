@@ -1,4 +1,4 @@
-`bash
+`
 type State =
   | 'AndhraPradesh'
   | 'ArunachalPradesh'
