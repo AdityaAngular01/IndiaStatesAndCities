@@ -1,4 +1,4 @@
-`typescript
+<pre>
 
 type State =
   | 'AndhraPradesh'
@@ -1045,4 +1045,4 @@ export const Constant = {
   },
 };
 
-`
+</pre>
