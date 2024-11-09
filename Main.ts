@@ -1,4 +1,43 @@
-states: [
+type State =
+  | 'AndhraPradesh'
+  | 'ArunachalPradesh'
+  | 'Assam'
+  | 'Bihar'
+  | 'Chhattisgarh'
+  | 'Goa'
+  | 'Gujarat'
+  | 'Haryana'
+  | 'HimachalPradesh'
+  | 'JammuAndKashmir'
+  | 'Jharkhand'
+  | 'Karnataka'
+  | 'Kerala'
+  | 'MadhyaPradesh'
+  | 'Maharashtra'
+  | 'Manipur'
+  | 'Meghalaya'
+  | 'Mizoram'
+  | 'Nagaland'
+  | 'Odisha'
+  | 'Punjab'
+  | 'Rajasthan'
+  | 'Sikkim'
+  | 'TamilNadu'
+  | 'Telangana'
+  | 'Tripura'
+  | 'Uttarakhand'
+  | 'UttarPradesh'
+  | 'WestBengal'
+  | 'AndamanAndNicobarIslands'
+  | 'DadraAndNagarHaveli'
+  | 'DamanAndDiu'
+  | 'Delhi'
+  | 'Lakshadweep'
+  | 'Puducherry';
+
+export const Constant = {
+  // List of states
+  states: [
     'Andhra Pradesh',
     'Arunachal Pradesh',
     'Assam',
@@ -29,13 +68,12 @@ states: [
     'Uttar Pradesh',
     'West Bengal',
     'Andaman and Nicobar Islands',
-    'Chandigarh',
     'Dadra and Nagar Haveli',
     'Daman and Diu',
     'Delhi',
     'Lakshadweep',
     'Puducherry',
-      ],
+  ],
 
   // Cities for each state
   cities: {
@@ -69,7 +107,7 @@ states: [
       'Markapur',
       'Tadepalligudem',
       'Palnadu',
-      'Jammalamadugu'
+      'Jammalamadugu',
     ],
     ArunachalPradesh: [
       'Itanagar', // Capital city
@@ -95,7 +133,7 @@ states: [
       'Tirap',
       'West Kameng',
       'East Siang',
-      'Upper Subansiri'
+      'Upper Subansiri',
     ],
     Assam: [
       'Dispur', // Capital city
@@ -126,7 +164,7 @@ states: [
       'Sonitpur',
       'Dhemaji',
       'Barpeta',
-      'Bilasipara'
+      'Bilasipara',
     ],
     Bihar: [
       'Patna', // Capital city
@@ -160,7 +198,7 @@ states: [
       'Jehanabad',
       'Kaimur',
       'Rohtas',
-      'Saran'
+      'Saran',
     ],
     Chhattisgarh: [
       'Raipur', // Capital city
@@ -188,7 +226,7 @@ states: [
       'Kondagaon',
       'Baloda Bazar',
       'Raigarh',
-      'Pali'
+      'Pali',
     ],
     Goa: [
       'Panaji', // Capital city
@@ -207,7 +245,7 @@ states: [
       'Taleigao',
       'Aquem',
       'Siridao',
-      'Dona Paula'
+      'Dona Paula',
     ],
     Gujarat: [
       'Gandhinagar', // Capital city
@@ -239,7 +277,7 @@ states: [
       'Patan',
       'Unjha',
       'Kheda',
-      'Valsad'
+      'Valsad',
     ],
     Haryana: [
       'Chandigarh', // Capital city (shared with Punjab)
@@ -268,7 +306,7 @@ states: [
       'Hansi',
       'Bahadurgarh',
       'Barwala',
-      'Kharkhoda'
+      'Kharkhoda',
     ],
     HimachalPradesh: [
       'Shimla', // Capital city
@@ -294,7 +332,7 @@ states: [
       'Nagrota',
       'Nurpur',
       'Baghi',
-      'Chandigarh'
+      'Chandigarh',
     ],
     JammuAndKashmir: [
       'Srinagar', // Summer capital
@@ -325,7 +363,7 @@ states: [
       'Varmul',
       'Kangan',
       'Trekhama',
-      'Mendhar'
+      'Mendhar',
     ],
     Jharkhand: [
       'Ranchi', // Capital city
@@ -351,7 +389,7 @@ states: [
       'Chatra',
       'Palamu',
       'West Singhbhum',
-      'East Singhbhum'
+      'East Singhbhum',
     ],
     Karnataka: [
       'Bengaluru', // Capital city
@@ -388,7 +426,7 @@ states: [
       'Srirangapatna',
       'Nanjangud',
       'Vijayapura',
-      'Puttur'
+      'Puttur',
     ],
     Kerala: [
       'Thiruvananthapuram', // Capital city
@@ -420,7 +458,7 @@ states: [
       'Kothamangalam',
       'Koyilandy',
       'Kunnamkulam',
-      'Thalassery'
+      'Thalassery',
     ],
     MadhyaPradesh: [
       'Bhopal', // Capital city
@@ -457,7 +495,7 @@ states: [
       'Harda',
       'Alirajpur',
       'Anuppur',
-      'Ashok Nagar'
+      'Ashok Nagar',
     ],
     Maharashtra: [
       'Mumbai', // Capital city
@@ -496,7 +534,7 @@ states: [
       'Sindhudurg',
       'Boisar',
       'Parbhani',
-      'Aurangabad'
+      'Aurangabad',
     ],
     Manipur: [
       'Imphal', // Capital city
@@ -515,7 +553,7 @@ states: [
       'Peren',
       'Khongjom',
       'Moirang',
-      'Nambol'
+      'Nambol',
     ],
     Meghalaya: [
       'Shillong', // Capital city
@@ -532,7 +570,7 @@ states: [
       'Ranikor',
       'Amirabad',
       'Dawki',
-      'Pynursla'
+      'Pynursla',
     ],
     Mizoram: [
       'Aizawl', // Capital city
@@ -551,7 +589,7 @@ states: [
       'Thingdawl',
       'Saitual',
       'Reiek',
-      'Lengteng'
+      'Lengteng',
     ],
     Nagaland: [
       'Kohima', // Capital city
@@ -567,7 +605,7 @@ states: [
       'Phek',
       'Chümoukedima',
       'Chizami',
-      'Tseminyu'
+      'Tseminyu',
     ],
     Odisha: [
       'Bhubaneswar', // Capital city
@@ -600,7 +638,7 @@ states: [
       'Kendujhar',
       'Sundargarh',
       'Chhatrapur',
-      'Gopalpur'
+      'Gopalpur',
     ],
     Punjab: [
       'Chandigarh', // Capital city (shared with Haryana)
@@ -635,7 +673,7 @@ states: [
       'Batala',
       'Anandpur Sahib',
       'Bilga',
-      'Bassi Pathana'
+      'Bassi Pathana',
     ],
     Rajasthan: [
       'Jaipur', // Capital city
@@ -672,7 +710,7 @@ states: [
       'Phalodi',
       'Makrana',
       'Kishangarh',
-      'Bundi'
+      'Bundi',
     ],
     Sikkim: [
       'Gangtok', // Capital city
@@ -689,7 +727,7 @@ states: [
       'Melli',
       'Sombaria',
       'Tadong',
-      'Sang'
+      'Sang',
     ],
     TamilNadu: [
       'Chennai', // Capital city
@@ -728,7 +766,7 @@ states: [
       'Kumbakonam',
       'Mettur',
       'Sirkali',
-      'Udhagamandalam (Ooty)'
+      'Udhagamandalam (Ooty)',
     ],
     Telangana: [
       'Hyderabad', // Capital city
@@ -763,7 +801,7 @@ states: [
       'Banjara Hills',
       'Ameerpet',
       'Lingampally',
-      'Puranapul'
+      'Puranapul',
     ],
     Tripura: [
       'Agartala', // Capital city
@@ -787,7 +825,7 @@ states: [
       'Raishyabari',
       'Simna',
       'Lalchara',
-      'Chandrapur'
+      'Chandrapur',
     ],
     Uttarakhand: [
       'Dehradun', // Capital city
@@ -814,7 +852,7 @@ states: [
       'Bhawanipur',
       'Bijnor',
       'Lansdowne',
-      'Kalsi'
+      'Kalsi',
     ],
     UttarPradesh: [
       'Lucknow', // Capital city
@@ -861,7 +899,7 @@ states: [
       'Mirzapur',
       'Prayagpur',
       'Kanshiram Nagar',
-      'Lalitpur'
+      'Lalitpur',
     ],
     WestBengal: [
       'Kolkata', // Capital city
@@ -899,7 +937,7 @@ states: [
       'Chinsurah',
       'Madarhat',
       'Burdwan',
-      'Santipur'
+      'Santipur',
     ],
     AndamanAndNicobarIslands: [
       'Port Blair', // Capital city
@@ -918,7 +956,7 @@ states: [
       'Ross Island',
       'Viper Island',
       'Long Island',
-      'Swaraj Dweep (formerly Havelock)'
+      'Swaraj Dweep (formerly Havelock)',
     ],
     DadraAndNagarHaveli: [
       'Silvassa', // Capital city
@@ -927,7 +965,7 @@ states: [
       'Amli',
       'Saily',
       'Khanvel',
-      'Vasona'
+      'Vasona',
     ],
     DamanAndDiu: [
       'Daman', // Capital city
@@ -936,7 +974,7 @@ states: [
       'Moti Daman',
       'Fudam',
       'Devka Beach',
-      'Vanakbara'
+      'Vanakbara',
     ],
     Delhi: [
       'New Delhi', // Capital city
@@ -965,7 +1003,7 @@ states: [
       'Raj Nagar',
       'Burari',
       'Dwarka Sector 21',
-      'Sarai Kale Khan'
+      'Sarai Kale Khan',
     ],
     Lakshadweep: [
       'Kavaratti', // Capital city
@@ -979,7 +1017,7 @@ states: [
       'Bitra',
       'Kalapeni',
       'Suheli Par',
-      'Maliku Atoll'
+      'Maliku Atoll',
     ],
     Puducherry: [
       'Puducherry', // Capital city
@@ -987,6 +1025,20 @@ states: [
       'Cuddalore',
       'Karaikal',
       'Mahe',
-      'Yanam'
+      'Yanam',
     ],
   },
+
+  // Method to get cities by state
+  getCitiesByState(state: string): string[] {
+    // Sanitize state name to match the object key format
+    const sanitizedState = state
+      .replace(/\s+/g, '') // Remove spaces
+      .replace(/and/g, 'And') // Capitalize 'and' to 'And'
+      .replace(/-/g, '') // Remove hyphens
+      .replace(/\b\w/g, (char) => char.toUpperCase()); // Capitalize first letter of each word (for states like 'Uttar Pradesh')
+
+    // Cast sanitized state to the correct type
+    return this.cities[sanitizedState as State] || [];
+  },
+};
