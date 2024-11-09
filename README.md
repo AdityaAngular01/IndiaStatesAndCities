@@ -1,4 +1,5 @@
-`
+`typescript
+
 type State =
   | 'AndhraPradesh'
   | 'ArunachalPradesh'
